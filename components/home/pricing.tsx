@@ -92,11 +92,11 @@ export default function Pricing() {
         <div>
           <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
             <h2 className="font-bold text-2xl sm:text-3xl md:text-6xl leading-[1.1]">
-              Subscription Plans
+              订阅计划
             </h2>
             <p className="max-w-[95%] sm:max-w-[85%] text-sm sm:text-lg leading-normal text-muted-foreground">
-              Start building for free and scale up as you grow. All plans
-              include the core features you need to get started.
+              选择适合您的订阅计划，享受无限制的 AI 故事创作体验。
+              所有计划都包含完整的平台功能和技术支持。
             </p>
           </div>
           <div className="grid lg:grid-cols-3 gap-6 sm:gap-8 mt-8 md:mt-12">
@@ -111,7 +111,7 @@ export default function Pricing() {
               >
                 {tier.featured && (
                   <div className="absolute -top-3 left-0 right-0 mx-auto w-fit rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
-                    Popular
+                    热门推荐
                   </div>
                 )}
                 <div className="space-y-4">
@@ -146,7 +146,7 @@ export default function Pricing() {
                       handleSubscribe(tier.productId, tier.discountCode)
                     }
                   >
-                    Get started
+                    开始订阅
                   </Button>
                 </div>
               </div>
@@ -158,11 +158,11 @@ export default function Pricing() {
         <div>
           <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
             <h2 className="font-bold text-2xl sm:text-3xl md:text-6xl leading-[1.1]">
-              Credit Packages
+              积分包
             </h2>
             <p className="max-w-[95%] sm:max-w-[85%] text-sm sm:text-lg leading-normal text-muted-foreground">
-              Purchase credits to use our services on-demand. Perfect for
-              occasional use and testing.
+              按需购买积分，灵活使用 AI 创作服务。
+              适合偶尔使用或想要先体验功能的用户。
             </p>
           </div>
           <div className="grid lg:grid-cols-3 gap-6 sm:gap-8 mt-8 md:mt-12">
@@ -202,7 +202,7 @@ export default function Pricing() {
                       )
                     }
                   >
-                    Buy Credits
+                    购买积分
                   </Button>
                 </div>
               </div>

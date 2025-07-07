@@ -1,10 +1,10 @@
 'use client'
 
 const stats = [
-  { id: 1, name: 'Creators on the platform', value: '8,000+' },
-  { id: 2, name: 'Flat platform fee', value: '3%' },
-  { id: 3, name: 'Uptime guarantee', value: '99.9%' },
-  { id: 4, name: 'Paid out to creators', value: '$70M' },
+  { id: 1, name: '累计生成故事', value: '50,000+' },
+  { id: 2, name: '用户满意度', value: '98.5%' },
+  { id: 3, name: '平均响应时间', value: '2.8秒' },
+  { id: 4, name: '活跃用户', value: '5,000+' },
 ]
 
 export default function Stats() {
@@ -14,9 +14,11 @@ export default function Stats() {
         <div className="mx-auto max-w-2xl lg:max-w-none">
           <div className="text-center">
             <h2 className="text-4xl font-semibold tracking-tight text-balance text-foreground sm:text-5xl">
-              Trusted by creators worldwide
+              用户信赖的 AI 创作平台
             </h2>
-            <p className="mt-4 text-lg/8 text-muted-foreground">Lorem ipsum dolor sit amet consect adipisicing possimus.</p>
+            <p className="mt-4 text-lg/8 text-muted-foreground">
+              数千用户已经在这里创作出了属于自己的精彩故事，加入我们，开启你的创作之旅。
+            </p>
           </div>
           <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (

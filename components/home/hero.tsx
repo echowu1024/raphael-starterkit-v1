@@ -1,60 +1,100 @@
 'use client'
 
+import { Button } from "@/components/ui/button";
+import { Sparkles, BookOpen, Zap, ArrowRight } from "lucide-react";
+
 export default function Hero() {
+  const scrollToAIGenerator = () => {
+    const aiSection = document.querySelector('#ai-story-generator');
+    if (aiSection) {
+      aiSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="bg-background">
-      <div className="relative">
-        <div className="mx-auto max-w-7xl">
-          <div className="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
-            <svg
-              viewBox="0 0 100 100"
-              preserveAspectRatio="none"
-              aria-hidden="true"
-              className="absolute inset-y-0 right-8 hidden h-full w-80 translate-x-1/2 transform fill-background lg:block"
-            >
-              <polygon points="0,0 90,0 50,100 0,100" />
-            </svg>
+      <div className="relative overflow-hidden">
+        {/* Background gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
+        
+        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
+          <div className="mx-auto max-w-2xl text-center">
+            {/* Badge */}
+            <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary ring-1 ring-primary/20">
+              <Sparkles className="w-4 h-4" />
+              AI 驱动的创意写作平台
+              <ArrowRight className="w-4 h-4" />
+            </div>
 
-            <div className="relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0">
-              <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
-                <div className="hidden sm:mb-10 sm:flex">
-                  <div className="relative rounded-full px-3 py-1 text-sm/6 text-muted-foreground ring-1 ring-border hover:ring-ring">
-                    Global Authentication & Payment Solutions{' '}
-                    <a href="#" className="font-semibold whitespace-nowrap text-primary">
-                      <span aria-hidden="true" className="absolute inset-0" />
-                      Learn more <span aria-hidden="true">&rarr;</span>
-                    </a>
-                  </div>
-                </div>
-                <h1 className="text-5xl font-semibold tracking-tight text-pretty text-foreground sm:text-7xl">
-                  Build Without Borders
-                </h1>
-                <p className="mt-8 text-lg font-medium text-pretty text-muted-foreground sm:text-xl/8">
-                  Launch your global business with seamless authentication and payment processing. 
-                  Built for developers worldwide, with tools that work everywhere.
-                </p>
-                <div className="mt-10 flex items-center gap-x-6">
-                  <a
-                    href="#"
-                    className="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-primary-foreground shadow-xs hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                  >
-                    Get started
-                  </a>
-                  <a href="#" className="text-sm/6 font-semibold text-foreground">
-                    View documentation <span aria-hidden="true">→</span>
-                  </a>
-                </div>
+            {/* Main headline */}
+            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+              <span className="block">重生之</span>
+              <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                AI 创作时代
+              </span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="mt-6 text-lg leading-8 text-muted-foreground sm:text-xl">
+              让 AI 成为你的专属编剧，输入简单的设定，获得精彩的职场逆袭爽文。
+              从平凡小秘到职场精英，每个人都有属于自己的华丽转身故事。
+            </p>
+
+            {/* Features highlight */}
+            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <BookOpen className="w-4 h-4 text-primary" />
+                智能故事生成
+              </div>
+              <div className="flex items-center gap-2">
+                <Zap className="w-4 h-4 text-primary" />
+                秒级创作体验
+              </div>
+              <div className="flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-primary" />
+                无限创意可能
+              </div>
+            </div>
+
+            {/* CTA buttons */}
+            <div className="mt-10 flex items-center justify-center gap-4">
+              <Button 
+                size="lg" 
+                onClick={scrollToAIGenerator}
+                className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
+              >
+                <Sparkles className="w-5 h-5 mr-2" />
+                开始创作你的故事
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <a href="#features">
+                  了解更多功能
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
+              </Button>
+            </div>
+
+            {/* Stats */}
+            <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-3">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-foreground">10,000+</div>
+                <div className="text-sm text-muted-foreground">生成故事数</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-foreground">98%</div>
+                <div className="text-sm text-muted-foreground">用户满意度</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-foreground">3秒</div>
+                <div className="text-sm text-muted-foreground">平均生成时间</div>
               </div>
             </div>
           </div>
         </div>
-        <div className="bg-muted lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-          <img
-            alt="Global business illustration"
-            src="https://images.unsplash.com/photo-1483389127117-b6a2102724ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80"
-            className="aspect-3/2 object-cover lg:aspect-auto lg:size-full"
-          />
-        </div>
+
+        {/* Floating elements */}
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-secondary/10 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
     </div>
   )

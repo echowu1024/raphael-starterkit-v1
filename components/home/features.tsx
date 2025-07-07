@@ -1,31 +1,31 @@
 'use client'
 
-import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/outline'
+import { SparklesIcon, CpuChipIcon, BookOpenIcon, RocketLaunchIcon } from '@heroicons/react/24/outline'
 
 const features = [
   {
-    name: 'Global Authentication',
+    name: 'AI 智能创作',
     description:
-      'Seamless sign-in experience for users worldwide. Support for email/password, OAuth providers, and advanced security features that work across all regions.',
-    icon: FingerPrintIcon,
+      '基于最新的 GPT-4o-mini 模型，为您提供高质量的故事生成服务。只需输入简单设定，即可获得精彩纷呈的职场逆袭爽文。',
+    icon: SparklesIcon,
   },
   {
-    name: 'Secure Payments',
+    name: '秒级响应',
     description:
-      'Accept payments in multiple currencies with support for international payment methods. Our integration with Creem.io ensures smooth transactions for global customers.',
-    icon: LockClosedIcon,
+      '采用 OpenRouter 高性能 API，确保快速响应。平均 3 秒内完成故事生成，让创意不再等待。',
+    icon: CpuChipIcon,
   },
   {
-    name: 'Developer Friendly',
+    name: '无限创意',
     description:
-      'Built with Next.js and TypeScript for a modern development experience. Clean code structure and comprehensive documentation to help you get started quickly.',
-    icon: CloudArrowUpIcon,
+      '支持多样化的故事设定和情节发展。从职场新人到行业精英，每个故事都独一无二，充满惊喜。',
+    icon: BookOpenIcon,
   },
   {
-    name: 'Subscription Management',
+    name: '开箱即用',
     description:
-      'Ready-to-use subscription models and credit systems. Monitor usage, handle billing cycles, and manage customer accounts - all out of the box.',
-    icon: ArrowPathIcon,
+      '基于 Next.js 15 和现代技术栈构建，完善的订阅系统和用户管理。为开发者提供完整的 SaaS 解决方案。',
+    icon: RocketLaunchIcon,
   },
 ]
 
@@ -34,14 +34,13 @@ export default function Features() {
     <div id="features" className="bg-background py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base/7 font-semibold text-primary">Global-Ready Platform</h2>
+          <h2 className="text-base/7 font-semibold text-primary">强大的 AI 创作引擎</h2>
           <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-foreground sm:text-5xl lg:text-balance">
-            Everything you need for worldwide business
+            让每个人都成为故事创作者
           </p>
           <p className="mt-6 text-lg/8 text-muted-foreground">
-            Our starter kit provides all the essential tools to build applications that work globally. 
-            From authentication to payments, we've designed a solution that helps developers launch 
-            faster with features that work across borders.
+            我们的 AI 驱动平台将创意写作变得前所未有的简单。无论您是想要放松娱乐，
+            还是寻找创作灵感，都能在这里找到属于自己的精彩故事。
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
